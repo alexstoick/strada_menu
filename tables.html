@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Strada Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <div class="container">
+
+    <div class="row">
+      <h1> Tables </h1>
+      <div class="col-lg-4 sides">
+        <p> Table 1 </p>
+      </div>
+      <div class="col-lg-4 sides">
+        <p> Table 2 </p>
+      </div>
+      <div class="col-lg-4 sides">
+        <p> Table 3 </p>
+      </div>
+    </div>
+
+  </div> <!-- /container -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <script>
+    $(".col-lg-4").click(function (event) {
+        event.preventDefault() ;
+        console.log ( $(this)[0].childNodes[1].innerText ) ;
+        tableID = $(this)[0].childNodes[1].innerText.substring(6,7) ;
+        window.location.href = "index.html?table=" + tableID;
+      }
+    ) ;
+  </script>
+
+</body>
+</html>
