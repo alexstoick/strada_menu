@@ -796,7 +796,7 @@
         success: function ( data ) {
 
           console.log ( data ) ;
-          items = data ;
+          items = data["items"] ;
           count = 0 ;
           items.forEach ( function ( entry ) {
             ++ count ;
